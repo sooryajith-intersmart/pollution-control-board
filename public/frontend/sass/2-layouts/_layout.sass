@@ -1,0 +1,278 @@
+// layout
+#viewport
+    &.Blur
+        filter: blur(2px)
+        -webkit-filter: blur(2px)
+#pageWrapper
+    overflow: hidden
+    margin-top: 69px
+    @media only screen and (min-width: 468px)
+        margin-top: 75px
+    @media only screen and (min-width: 576px)
+        margin-top: 90px
+    @media only screen and (min-width: 992px)
+        margin-top: 121px
+    @media only screen and (min-width: 1200px)
+        margin-top: 136px
+    @media only screen and (min-width: 1551px)
+        margin-top: 151px
+
+// HEADING STYLE
+.MainHead
+    width: 100%
+    margin-bottom: 15px
+    @media only screen and (min-width: 468px)
+        margin-bottom: 25px
+    @media only screen and (min-width: 768px)
+        margin-bottom: 35px
+    @media only screen and (min-width: 1551px)
+        margin-bottom: 40px
+    .Head
+        font-weight: 700
+        color: #fff
+        font-size: 32px
+        @include TxtGrad
+        @media only screen and (min-width: 468px)
+            font-size: 40px
+        @media only screen and (min-width: 768px)
+            font-size: 46px
+        @media only screen and (min-width: 992px)
+            font-size: 52px
+        @media only screen and (min-width: 1551px)
+            font-size: 60px
+    .Tagline
+        color: #000000
+        margin-top: 10px
+        font-size: 14px
+        line-height: 22px
+        @media only screen and (min-width: 468px)
+            margin-top: 15px
+            font-size: 16px
+            line-height: 26px
+        @media only screen and (min-width: 768px)
+            font-size: 18px
+            line-height: 28px
+        @media only screen and (min-width: 1200px)
+            margin-top: 20px
+            font-size: 20px
+        @media only screen and (min-width: 1551px)
+            line-height: 32px
+            margin-top: 25px
+            font-size: 22px
+    .ViewAll
+        color: #4A4A4A
+        font-size: 14px
+        margin-top: 10px
+        display: block
+        @media only screen and (min-width: 468px)
+            font-size: 16px
+        @media only screen and (min-width: 768px)
+            margin: 0
+        @media only screen and (min-width: 992px)
+            font-size: 18px
+        @media only screen and (min-width: 1551px)
+            font-size: 20px
+        svg
+            fill: #be202e
+            width: 12px
+            margin-left: 10px
+            @media only screen and (min-width: 468px)
+                width: 15px
+                margin-left: 18px
+            @media only screen and (min-width: 992px)
+                width: 17px
+                margin-left: 20px
+        &:hover
+            color: $basecolor
+            letter-spacing: 2px
+    &.center
+        text-align: center
+        margin-left: auto
+        margin-right: auto
+    &.FlxHead
+        @media only screen and (min-width: 768px)
+            display: flex
+            align-items: center
+            justify-content: space-between
+
+// BUTTON STYLE
+.hoveranim
+    display: flex
+    align-items: center
+    justify-content: center
+    position: relative
+    overflow: hidden
+    &::before
+        content: ''
+        position: absolute
+        z-index: 0
+        top: 0
+        bottom: 0
+        width: 100%
+        background: $basecolor2
+        -webkit-transform: scaleX(0)
+        -ms-transform: scaleX(0)
+        transform: scaleX(0)
+        -webkit-transition: -webkit-transform 0.3s ease
+        transition: -webkit-transform 0.3s ease
+        transition: transform 0.3s ease
+        transition: transform 0.3s ease, -webkit-transform 0.3s ease
+        left: 0
+        -webkit-transform-origin: right
+        -ms-transform-origin: right
+        transform-origin: right
+    span
+        position: relative
+        z-index: 1
+    &:hover
+        color: #fff
+        &::before
+            -webkit-transform-origin: left
+            -ms-transform-origin: left
+            transform-origin: left
+            -webkit-transform: scaleX(1)
+            -ms-transform: scaleX(1)
+            transform: scaleX(1)
+
+.owl-dots
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-top: 25px
+    @media only screen and (min-width: 468px)
+        margin-top: 33px
+    @media only screen and (min-width: 1200px)
+        margin-top: 45px
+    button
+        border-radius: 50%
+        background: rgb(32, 45, 55) !important
+        opacity: 0.2
+        width: 8px
+        height: 8px
+        transition: all .3s
+        font-size: 0
+        padding: 0
+        border: none
+        outline: none
+        box-shadow: none
+        margin: 0 8px
+        @media only screen and (min-width: 468px)
+            margin: 0 11px
+        span
+            display: none
+        &.active
+            background: $basecolor !important
+            opacity: 1
+.owl-nav
+    display: flex
+    align-items: center
+    justify-content: center
+    button
+        opacity: 1
+        width: 10px
+        height: 15px
+        padding: 0
+        margin: 0
+        font-size: 0
+        transition: all .3s
+        display: block
+        outline: none
+        outline-offset: none
+        position: absolute
+        top: 50%
+        z-index: 2
+        transform: translateY(-50%)
+        span
+            display: none
+        &.owl-prev
+            left: -45px
+            background: url( "data:image/svg+xml,%3Csvg fill='%23405a6e' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240.2 448.2'%3E%3Cpath d='M4.7,212.7l208-208c6.2-6.3,16.4-6.3,22.6-0.1c0,0,0.1,0.1,0.1,0.1c6.3,6.2,6.3,16.4,0.1,22.6c0,0-0.1,0.1-0.1,0.1L38.7,224.1l196.8,196.6c6.3,6.3,6.3,16.4,0,22.7s-16.4,6.3-22.7,0l-208-208C-1.5,229.2-1.6,219.1,4.7,212.7C4.7,212.8,4.7,212.8,4.7,212.7z'/%3E%3C/svg%3E" ) no-repeat center !important
+        &.owl-next
+            right: -45px
+            background: url( "data:image/svg+xml,%3Csvg fill='%23405a6e' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240.2 448.2'%3E%3Cpath d='M235.5,235.4l-208,208c-6.2,6.3-16.4,6.3-22.6,0.1c0,0-0.1-0.1-0.1-0.1c-6.3-6.2-6.3-16.4-0.1-22.6c0,0,0.1-0.1,0.1-0.1l196.8-196.6L4.7,27.4c-6.3-6.3-6.3-16.4,0-22.7s16.4-6.3,22.7,0l208,208C241.7,218.9,241.8,229.1,235.5,235.4C235.5,235.4,235.5,235.4,235.5,235.4z'/%3E%3C/svg%3E" ) no-repeat center !important
+// ACCORDION
+.CommonAccord
+    margin: 0 auto
+    @media only screen and ( min-width:992px)
+        padding: 0 80px
+    .accordion-item
+        background: none
+        border: none
+        border-bottom: 1px solid rgba(0, 0, 0, 0.11)
+    .accordion-header
+        button
+            color: #000000
+            font-weight: 400
+            text-align: left
+            background: none
+            padding: 10px 0
+            line-height: 35px
+            margin: 0
+            font-size: 17px
+            @media only screen and ( min-width:468px)
+                font-size: 18px
+            @media only screen and ( min-width:992px)
+                font-size: 20px
+                padding: 15px 0
+            @media only screen and ( min-width: 1200px )
+                font-size: 25px
+            @media only screen and ( min-width: 1551px )
+                font-size: 30px
+                padding: 27px 0
+            &:focus
+                box-shadow: none
+                border: none
+                outline: 0
+            // &[aria-expanded="true"]
+            //     color: rgb(0, 0, 0) !important
+            //     &::after 
+            //         color: rgb(0, 0, 0) !important
+            &::after
+                position: absolute
+                content: '+'
+                right: 0px
+                font-size: 20px
+                color: #000000
+                background: none
+                display: flex
+                align-items: center
+                justify-content: center
+                font-weight: 400
+                @media only screen and ( min-width: 992px )
+                    font-size: 30px
+            &:not(.collapsed)
+                background: none
+                border: none
+                color: #000000
+                font-weight: 500
+                box-shadow: none
+                &::after
+                    content: '-'
+            span
+                width: 95%
+    .accordion-body
+        font-size: 14px
+        line-height: 26px
+        text-align: justify
+        padding: 0px 10px 25px
+        @media only screen and ( min-width: 992px )
+            font-size: 15px
+            padding: 0px 30px 45px
+        @media only screen and ( min-width: 1200px )
+            font-size: 16px
+
+// CUSTOME CONTAINER
+.CustomeContainer
+    padding: 0 15px
+    width: 100%
+    @media only screen and (min-width: 1050px)
+        width: calc(100% - ((100% - 1050px)/ 2))
+
+    @media only screen and (min-width: 1200px)
+        width: calc(100% - ((100% - 1180px)/ 2))
+
+    @media only screen and (min-width: 1441px)
+        width: calc(100% - ((100% - 1350px)/ 2))
+
+    @media only screen and (min-width: 1551px)
+        width: calc(100% - ((100% - 1440px)/ 2))

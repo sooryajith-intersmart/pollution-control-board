@@ -1,0 +1,607 @@
+// ██╗███╗░░██╗████████╗███████╗██████╗░░██████╗███╗░░░███╗░█████╗░██████╗░████████╗
+// ██║████╗░██║╚══██╔══╝██╔════╝██╔══██╗██╔════╝████╗░████║██╔══██╗██╔══██╗╚══██╔══╝
+// ██║██╔██╗██║░░░██║░░░█████╗░░██████╔╝╚█████╗░██╔████╔██║███████║██████╔╝░░░██║░░░
+// ██║██║╚████║░░░██║░░░██╔══╝░░██╔══██╗░╚═══██╗██║╚██╔╝██║██╔══██║██╔══██╗░░░██║░░░
+// ██║██║░╚███║░░░██║░░░███████╗██║░░██║██████╔╝██║░╚═╝░██║██║░░██║██║░░██║░░░██║░░░
+// ╚═╝╚═╝░░╚══╝░░░╚═╝░░░╚══════╝╚═╝░░╚═╝╚═════╝░╚═╝░░░░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝░░░╚═╝░░░
+/*!
+ * Disigned & Developed by Intersmart Solutions (https://intersmartsolution.com)
+ * Copyright 2011-2022 Intersmart Solutions pvt LTD.
+ */
+
+// VARIABLES
+$fontstack1: "Open Sans", sans-serif
+$fontstack2: "Red Hat Display", sans-serif
+
+$basecolor: #BE202E
+$basecolor2: #000000
+
+$hover: #BE202E
+
+$text: #000
+
+$white: rgb(255, 255, 255)
+$black: rgb(0, 0, 0)
+
+// BASE STYLES
+*
+    margin: 0
+    padding: 0
+    border: none
+    outline: none
+    list-style: none
+    box-sizing: border-box
+    border-collapse: inherit
+    -moz-osx-font-smoothing: grayscale
+    -webkit-font-smoothing: antialiased
+    -webkit-tap-highlight-color: transparent
+    -webkit-text-rendering: optimizeSpeed
+    text-rendering: optimizeSpeed
+html, body
+    font-family: $fontstack1
+    font-optical-sizing: auto
+    font-weight: 400
+    font-style: normal
+    font-variation-settings: "wdth" 100
+    line-height: normal
+
+body
+    background: #000
+
+h1, h2, h3, h4, h5, h6
+    margin: 0
+    font-family: inherit
+    font-weight: 500
+    line-height: 1.2
+    color: inherit
+    margin-bottom: 10px
+    @media only screen and (min-width: 768px)
+        margin-bottom: 15px
+    @media only screen and (min-width: 1550px)
+        margin-bottom: 25px
+
+h1
+    font-size: 28px
+    line-height: 33.6px
+    @media only screen and (min-width: 468px)
+        font-size: 32px
+        line-height: 38.4px
+    @media only screen and (min-width: 1441px)
+        font-size: 40px
+        line-height: 48px
+
+h2
+    font-size: 24px
+    line-height: 28.8px
+    @media only screen and (min-width: 468px)
+        font-size: 28px
+        line-height: 33.6px
+    @media only screen and (min-width: 1550px)
+        font-size: 32px
+        line-height: 38.4px
+
+h3
+    font-size: 20px
+    line-height: 24px
+    @media only screen and (min-width: 468px)
+        font-size: 24px
+        line-height: 28.8px
+    @media only screen and (min-width: 1200px)
+        font-size: 28px
+        line-height: 33.6px
+
+h4
+    font-size: 16px
+    line-height: 20.5px
+    @media only screen and (min-width: 468px)
+        font-size: 20px
+        line-height: 24px
+    @media only screen and (min-width: 1200px)
+        font-size: 24px
+        line-height: 28.8px
+
+h5
+    font-size: 14px
+    line-height: 18px
+    @media only screen and (min-width: 468px)
+        font-size: 16px
+        line-height: 20.5px
+    @media only screen and (min-width: 1200px)
+        font-size: 20px
+        line-height: 24px
+
+h6
+    font-size: 13px
+    line-height: 16px
+    @media only screen and (min-width: 468px)
+        font-size: 14px
+        line-height: 18px
+    @media only screen and (min-width: 1200px)
+        font-size: 16px
+        line-height: 19.2px
+p
+    color: #000
+    margin-bottom: 15px
+    font-size: 14px
+    font-weight: 400
+    line-height: 22px
+    @media only screen and (min-width: 768px)
+        font-size: 15px
+        margin-bottom: 25px
+    @media only screen and (min-width: 1200px)
+        font-size: 16px
+        margin-bottom: 30px
+        line-height: 26px
+strong
+    font-weight: 600
+
+a
+    color: $basecolor
+    display: inline
+    text-decoration: underline
+    text-underline-position: under
+    &:hover
+        color: $basecolor
+
+a
+    text-decoration: none
+    transition: all .3s
+    &:hover
+        color: inherit
+
+ul
+    margin: 0
+    padding: 0
+    list-style: none
+
+img
+    vertical-align: middle
+    border: 0
+    -ms-interpolation-mode: bicubic
+    max-width: 100%
+    height: auto
+
+svg
+    display: inline-block
+    position: relative
+    width: 100%
+    vertical-align: middle
+    overflow: hidden
+
+::selection
+    color: #fff
+    background: $basecolor
+::-moz-selection
+    color: #fff
+    background: $basecolor
+::-webkit-scrollbar
+    width: 5px
+::-webkit-scrollbar-thumb
+    background: $basecolor
+    border-radius: 30px
+::-webkit-scrollbar-track
+    box-shadow: inset 0 0 0 grey
+    border-radius: 0px
+    background: rgb(168, 180, 198)
+
+.container
+    width: 100%
+    margin-right: auto
+    margin-left: auto
+    max-width: 100%
+    padding: 15px 15px 35px
+
+//MIXINS
+@mixin display
+    display: -ms-flexbox
+    display: flex
+    -ms-flex-wrap: wrap
+    flex-wrap: wrap
+
+@mixin center
+    display: -ms-flexbox
+    display: flex
+    align-items: center
+    justify-content: center
+
+@mixin imgFit
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+@mixin userselect
+    -webkit-user-select: none !important
+    -moz-user-select: none !important
+    -ms-user-select: none !important
+    user-select: none !important
+
+@mixin TxtGrad
+    background: linear-gradient(0deg, $basecolor, $basecolor2, $basecolor, $basecolor)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-size: 400% 400%
+    animation: gradient 10s ease infinite
+    @keyframes gradient
+        0%
+            background-position: 0% 50%
+
+        50%
+            background-position: 20% 100%
+
+        100%
+            background-position: 50% 200%
+.owl-nav
+    display: none
+
+//SCREEN
+.MainHead
+    font-family: $fontstack2
+    font-optical-sizing: auto
+    color: #000
+    // font-size: calc(30px + 1.2vw)
+    font-size: 30px
+    font-style: normal
+    font-weight: 900
+    line-height: normal
+    text-transform: uppercase
+    text-align: center
+    margin-bottom: 15px
+.Screens
+    position: relative
+    width: 100vw
+    height: 100vh
+    overflow: hidden
+    .ScreenBG
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        video
+            @include imgFit
+    .container
+        position: relative
+        z-index: 1
+        max-width: 800px
+    .Row
+        margin: -2.6px
+        @include display
+    .Col
+        padding: 2.6px
+        width: calc(100% / 3)
+    .BoxTitle
+        font-family: $fontstack2
+        font-optical-sizing: auto
+        color: #000
+        text-transform: uppercase
+        // font-size: calc(20px + 1.5vw)
+        font-size: 20px
+        font-style: normal
+        font-weight: 700
+        line-height: normal
+        padding: 1px 20px
+        margin: auto
+        margin-bottom: 4px
+        display: flex
+        width: fit-content
+        width: -moz-fit-content
+        min-width: 55%
+        min-height: 28px
+        flex-shrink: 0
+        border-radius: 5px
+        background: rgba(255, 255, 255, 0.75)
+        backdrop-filter: blur(2px)
+        align-items: center
+        justify-content: center
+
+    .Box
+        background: rgba(31, 31, 31, 0.75)
+        padding: 6px 10px 10px
+        border-radius: 7px
+        .GaugeSec
+            position: relative
+            overflow: hidden
+        .NeedleWrp
+            position: absolute
+            bottom: 0
+            left: 50%
+            transform: translateX(-50%)
+            height: 35%
+            width: 39%
+            border-radius: 150px 150px 0 0
+            .Needle
+                z-index: 0
+                background-color: #db0000
+                height: 3px
+                position: absolute
+                -webkit-transform-origin: left center
+                -moz-transform-origin: left center
+                -ms-transform-origin: left center
+                -o-transform-origin: left center
+                transform-origin: left center
+                -webkit-transform: rotate(-180deg)
+                -moz-transform: rotate(-180deg)
+                -ms-transform: rotate(-180deg)
+                -o-transform: rotate(-180deg)
+                transform: rotate(-180deg)
+                -webkit-transition: all 1s ease-in-out
+                -moz-transition: all 1s ease-in-out
+                -ms-transition: all 1s ease-in-out
+                -o-transition: all 1s ease-in-out
+                transition: all 1s ease-in-out
+                left: 50%
+                bottom: 0
+                width: 120px
+                @media only screen and (min-width: 400px)
+                    width: 75px
+                // position: absolute
+                // width: 100%
+                // height: calc(100% + 0px)
+                // background-color: #DB0000 !important
+                // clip-path: polygon(50% 0%, 50% 0%, 60% 100%, 40% 100%)
+                // transform: rotate(-90deg)
+                // transform-origin: bottom center
+                // transition: transform 0.5s ease
+                // bottom: 25px
+                // z-index: 0
+        .GuageValueWrp
+            position: absolute
+            bottom: 0
+            left: 50%
+            transform: translateX(-50%)
+            display: flex
+            align-items: flex-end
+            justify-content: center
+            flex-shrink: 0
+            background: #fff
+            height: 100%
+            width: 100%
+            border-radius: 150px 150px 0 0
+            padding-bottom: 4px
+            z-index: 1
+            max-width: 90px
+            .IndexValue
+                text-align: center
+                font-style: normal
+                font-weight: 700
+                font-size: 16px
+                line-height: 16px
+                display: flex
+                align-items: flex-end
+            .Symbol
+                margin-left: 1px
+                font-size: 12px
+                line-height: 12px
+                svg
+                    width: 100%
+                    height: 100%
+                    max-height: 11px
+        .LevelsOfConcern
+            color: #FFF
+            text-align: center
+            // font-size: calc(18.51px + 1.2vw)
+            font-size: 14px
+            line-height: 14px
+            font-style: normal
+            font-weight: 700
+            text-transform: uppercase
+            border-radius: 5px
+            width: fit-content
+            width: -moz-fit-content
+            margin: auto
+            min-width: 62%
+            min-height: 29px
+            flex-shrink: 0
+            margin-top: 15px
+            padding: 0 20px
+            @include center
+        &.AQI
+            --level1: #6BCE59
+            --level2: #BCCC4F
+            --level3: #E4C73B
+            --level4: #ED9A32
+            --level5: #E56639
+            --level6: #D63638
+            .GuageValueWrp
+                .IndexValue
+                    color: var(--level3)
+            .LevelsOfConcern
+                background: var(--level3)
+        &.HumiditY
+            --level1: #FFDAA1
+            --level2: #F3E000
+            --level3: #24C65B
+            --level4: #B9B9B9
+            --level5: #908B8B
+            --level6: #636363
+            .GuageValueWrp
+                .IndexValue
+                    color: var(--level3)
+            .LevelsOfConcern
+                background: var(--level3)
+        &.Temperature
+            --level1: #70A0FF
+            --level2: #1F54BA
+            --level3: #24C65B
+            --level4: #FFEB00
+            --level5: #E55400
+            --level6: #FF1A0C
+            .GuageValueWrp
+                .IndexValue
+                    color: var(--level3)
+            .LevelsOfConcern
+                background: var(--level3)
+        &.PM25
+            --level1: #5EF291
+            --level2: #33CE1A
+            --level3: #E4C73B
+            --level4: #FF8A00
+            --level5: #FF0000
+            --level6: #890F20
+            .GuageValueWrp
+                .IndexValue
+                    color: var(--level3)
+            .LevelsOfConcern
+                background: var(--level3)
+        &.PM10
+            --level1: #57EF8B
+            --level2: #33CE19
+            --level3: #F9D215
+            --level4: #E55400
+            --level5: #DB170B
+            --level6: #7D0B1B
+            .GuageValueWrp
+                .IndexValue
+                    color: var(--level3)
+            .LevelsOfConcern
+                background: var(--level3)
+        &.PM1
+            --level1: #5EF291
+            --level2: #33CE1A
+            --level3: #E4C73B
+            --level4: #FF8A00
+            --level5: #FF0000
+            --level6: #890F20
+            .GuageValueWrp
+                .IndexValue
+                    color: var(--level3)
+            .LevelsOfConcern
+                background: var(--level3)
+        &.PM100
+            --level1: #57EF8B
+            --level2: #33CE19
+            --level3: #F9D215
+            --level4: #E55400
+            --level5: #DB170B
+            --level6: #7D0B1B
+            .GuageValueWrp
+                .IndexValue
+                    color: var(--level3)
+            .LevelsOfConcern
+                background: var(--level3)
+        &.CO
+            --level1: #5EF291
+            --level2: #33CE1A
+            --level3: #E4C73B
+            --level4: #FF8A00
+            --level5: #FF0000
+            --level6: #890F20
+            .GuageValueWrp
+                .IndexValue
+                    color: var(--level3)
+            .LevelsOfConcern
+                background: var(--level3)
+        &.CO2
+            --level1: #57EF8B
+            --level2: #33CE19
+            --level3: #F9D215
+            --level4: #E55400
+            --level5: #DB170B
+            --level6: #7D0B1B
+            .GuageValueWrp
+                .IndexValue
+                    color: var(--level3)
+            .LevelsOfConcern
+                background: var(--level3)
+        &.Noise
+            --level1: #33CE19
+            --level2: #E4C73B
+            --level3: #FB8801
+            --level4: #FF0000
+            --level5: #830D1D
+            --level6: #1D1A1B
+            .GuageValueWrp
+                .IndexValue
+                    color: var(--level3)
+            .LevelsOfConcern
+                background: var(--level3)
+        &.Pressure
+            --level1: #1FF2F2
+            --level2: #1936CE
+            --level3: #32CA18
+            --level4: #08481E
+            --level5: #FB8801
+            --level6: #FF0000
+            .GuageValueWrp
+                .IndexValue
+                    color: var(--level3)
+            .LevelsOfConcern
+                background: var(--level3)
+        &.UVDial
+            --level1: #6ECD59
+            --level2: #BBCF4C
+            --level3: #EAC737
+            --level4: #ED9B2E
+            --level5: #E8633A
+            --level6: #D63636
+            .GuageValueWrp
+                .IndexValue
+                    color: var(--level3)
+            .LevelsOfConcern
+                background: var(--level3)
+        &.Lightintensity
+            --level1: #BABABA
+            --level2: #BCB6F7
+            --level3: #1FEDED
+            --level4: #EAC737
+            --level5: #FB8801
+            --level6: #FF0000
+            .GuageValueWrp
+                .IndexValue
+                    color: var(--level3)
+            .LevelsOfConcern
+                background: var(--level3)
+    .FootBox
+        background: rgba(31, 31, 31, 0.75)
+        padding: 20px
+        border-radius: 7px
+        margin: auto
+        margin-top: 18px
+        width: 100%
+        max-width: calc(100% - 40px)
+        .DFleX
+            @include display
+            .ImgBoX
+                width: 212px
+                border-radius: 4px
+                overflow: hidden
+                img
+                    @include imgFit
+            .CntnBoX
+                background: #fff
+                width: calc(100% - 212px - 20px)
+                border-radius: 4px
+                margin-left: 20px
+                padding: 15px 55px 15px 50px
+                font-family: $fontstack2
+                font-size: 22.19px
+                font-weight: 800
+                .TXT
+                    background: url('../images/FootBoxBG.gif')
+                    background-size: cover
+                    -webkit-background-clip: text
+                    background-clip: text
+                    -webkit-text-fill-color: transparent
+                    color: transparent
+        .splide__pagination
+            bottom: -17px
+            left: auto
+            padding: 0
+            .splide__pagination__page
+                width: 7px
+                height: 7px
+                transition: all .3s
+                background: #fff
+                margin: 0 4px
+                &.is-active
+                    background: #FFA100
+                    width: 18px
+                    border-radius: 30px
+
+@keyframes rotate
+    0%
+        background-color: var(--blue)
+        transform: rotate(-90deg)
+
+    80%
+        background-color: var(--blue)

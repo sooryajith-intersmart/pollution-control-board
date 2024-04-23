@@ -1,0 +1,343 @@
+.advertisePage
+    #Billboards
+        padding: 50px 0
+        @media only screen and (min-width: 575px)
+            padding: 65px 0
+        @media only screen and (min-width: 992px)
+            padding: 95px 0
+        @media only screen and (min-width: 1200px)
+            padding: 100px 0 120px
+        .MainHead
+            margin-bottom: 15px
+            @media only screen and (min-width: 468px)
+                margin-bottom: 25px
+            @media only screen and (min-width: 575px)
+                margin-bottom: 25px
+            @media only screen and (min-width: 768px)
+                margin-bottom: 30px
+            @media only screen and (min-width: 992px)
+                margin-bottom: 35px
+            @media only screen and (min-width: 1200px)
+                margin-bottom: 45px
+            .Head
+                font-size: 24px
+                line-height: 32px
+                margin-bottom: 6px
+                @media only screen and (min-width: 468px)
+                    font-size: 28px
+                    line-height: 36px
+                    margin-bottom: 12px
+                @media only screen and (min-width: 575px)
+                    font-size: 34px
+                    line-height: 40px
+                    margin-bottom: 15px
+                @media only screen and (min-width: 768px)
+                    font-size: 40px
+                    line-height: 46px
+                    margin-bottom: 20px
+                @media only screen and (min-width: 992px)
+                    font-size: 46px
+                    line-height: 52px
+                    margin-bottom: 30px
+                @media only screen and (min-width: 1200px)
+                    font-size: 54px
+                    line-height: 58px
+                @media only screen and (min-width: 1441px)
+                    font-size: 65px
+                    line-height: 70px
+                    margin-bottom: 40px
+        .billListing
+            @include display
+            margin: -18px -8px
+            @media only screen and (min-width: 1200px)
+                margin: -18px -12px
+            @media only screen and (min-width: 1441px)
+                margin: -18px -15px
+            &>*
+                width: 100%
+                padding: 18px 8px
+                @media only screen and (min-width: 468px)
+                    width: calc( 100% / 2 )
+                @media only screen and (min-width: 992px)
+                    width: calc( 100% / 4 )
+                @media only screen and (min-width: 1200px)
+                    padding: 18px 12px
+                @media only screen and (min-width: 1441px)
+                    padding: 18px 15px
+            .billBoard
+                .imgBx
+                    overflow: hidden
+                    margin-bottom: 10px
+                    height: 220px
+                    @media only screen and (min-width: 575px)
+                        height: 260px
+                        margin-bottom: 15px
+                    @media only screen and (min-width: 768px)
+                        margin-bottom: 20px
+                    @media only screen and (min-width: 992px)
+                        margin-bottom: 25px
+                    @media only screen and (min-width: 1200px)
+                        height: 310px
+                        margin-bottom: 30px
+                    @media only screen and (min-width: 1441px)
+                        height: 357px
+                    img
+                        @include imgFit
+                        transition: 0.5s all
+                .cnt
+                    .Title
+                        font-size: 18px
+                        font-weight: 700
+                        color: $black
+                        text-transform: uppercase
+                        margin-bottom: 4px
+                        @media only screen and (min-width: 468px)
+                            font-size: 20px
+                            margin-bottom: 6px
+                        @media only screen and (min-width: 575px)
+                            font-size: 22px
+                            margin-bottom: 8px
+                        @media only screen and (min-width: 768px)
+                            font-size: 24px
+                        @media only screen and (min-width: 992px)
+                            font-size: 26px
+                            margin-bottom: 10px
+                        @media only screen and (min-width: 1200px)
+                            font-size: 28px
+                        @media only screen and (min-width: 1441px)
+                            font-size: 30px
+
+                    .subText
+                        font-size: 11px
+                        text-transform: uppercase
+                        color: $black
+                        letter-spacing: 1px
+                        @media only screen and (min-width: 468px)
+                            font-size: 12px
+                        @media only screen and (min-width: 768px)
+                            font-size: 13px
+                    .Info
+                        margin-top: 10px
+                        font-size: 13px
+                        line-height: 20px
+                        @media only screen and (min-width: 468px)
+                            font-size: 14px
+                            line-height: 24px
+                        p
+                            margin-bottom: 0px
+                            font-size: 13px
+                            line-height: 20px
+                            @media only screen and (min-width: 468px)
+                                font-size: 14px
+                                line-height: 24px
+                &:hover
+                    .imgBx
+                        img
+                            transform: scale(1.2)
+
+    #hoarding
+        position: relative
+        margin-bottom: 45px
+        overflow: hidden
+        @media only screen and (min-width: 575px)
+            margin-bottom: 65px
+        @media only screen and (min-width: 992px)
+            margin-bottom: 95px
+        @media only screen and (min-width: 1200px)
+            margin-bottom: 105px
+        @media only screen and (min-width: 1441px)
+            margin-bottom: 125px
+        .imgBx
+            width: 100%
+            height: 300px
+            @media only screen and (min-width: 575px)
+                height: 450px
+            @media only screen and (min-width: 992px)
+                height: 650px
+            @media only screen and (min-width: 1200px)
+                height: 850px
+            @media only screen and (min-width: 1441px)
+                height: 1020px
+            img
+                @include imgFit
+        .hoardCaption
+            position: absolute
+            top: 0
+            left: 0
+            padding-top: 15px
+            display: flex
+            align-content: start
+            width: 100%
+            height: 100%
+            z-index: 1
+            @media only screen and (min-width: 468px)
+                padding-top: 25px
+            @media only screen and (min-width: 575px)
+                padding-top: 45px
+            @media only screen and (min-width: 1200px)
+                padding-top: 55px
+            @media only screen and (min-width: 1441px)
+                padding-top: 75px
+            .Caption
+                margin-bottom: 0
+                .Head
+                    background: inherit
+                    color: $white
+                    -webkit-text-fill-color: $white
+                    text-transform: uppercase
+                    font-size: 22px
+                    line-height: 22px
+                    @media only screen and (min-width: 468px)
+                        font-size: 30px
+                        line-height: 30px
+                    @media only screen and (min-width: 575px)
+                        font-size: 35px
+                        line-height: 40px
+                    @media only screen and (min-width: 768px)
+                        font-size: 40px
+                        line-height: 46px
+                    @media only screen and (min-width: 992px)
+                        font-size: 46px
+                        line-height: 52px
+                    @media only screen and (min-width: 1200px)
+                        font-size: 54px
+                        line-height: 58px
+                    @media only screen and (min-width: 1441px)
+                        font-size: 65px
+                        line-height: 70px
+                p
+                    color: $white
+                    text-transform: uppercase
+                    margin-bottom: 0
+                    font-size: 11px
+                    line-height: 16px
+                    @media only screen and (min-width: 575px)
+                        font-size: 12px
+                        line-height: 18px
+                    @media only screen and (min-width: 992px)
+                        font-size: 13px
+                        line-height: 22px
+    // #hoarding
+    //     position: relative
+    //     margin-bottom: 45px
+    //     overflow: hidden
+    //     @media only screen and (min-width: 575px)
+    //         margin-bottom: 65px
+    //     @media only screen and (min-width: 992px)
+    //         margin-bottom: 95px
+    //     @media only screen and (min-width: 1200px)
+    //         margin-bottom: 105px
+    //     @media only screen and (min-width: 1441px)
+    //         margin-bottom: 125px
+    //     .imgBx
+    //         width: 100%
+    //         height: 100%
+    //         img
+    //             @include imgFit
+    //     .hoardCaption
+    //         position: absolute
+    //         top: 0
+    //         left: 0
+    //         padding-top: 15px
+    //         display: flex
+    //         align-content: start
+    //         width: 100%
+    //         height: 100%
+    //         z-index: 1
+    //         @media only screen and (min-width: 468px)
+    //             padding-top: 25px
+    //         @media only screen and (min-width: 575px)
+    //             padding-top: 45px
+    //         @media only screen and (min-width: 1200px)
+    //             padding-top: 55px
+    //         @media only screen and (min-width: 1441px)
+    //             padding-top: 75px
+    //         .Caption
+    //             margin-bottom: 0
+    //             .Head
+    //                 background: inherit
+    //                 color: $white
+    //                 -webkit-text-fill-color: $white
+    //                 text-transform: uppercase
+    //                 font-size: 22px
+    //                 line-height: 22px
+    //                 @media only screen and (min-width: 468px)
+    //                     font-size: 30px
+    //                     line-height: 30px
+    //                 @media only screen and (min-width: 575px)
+    //                     font-size: 35px
+    //                     line-height: 40px
+    //                 @media only screen and (min-width: 768px)
+    //                     font-size: 40px
+    //                     line-height: 46px
+    //                 @media only screen and (min-width: 992px)
+    //                     font-size: 46px
+    //                     line-height: 52px
+    //                 @media only screen and (min-width: 1200px)
+    //                     font-size: 54px
+    //                     line-height: 58px
+    //                 @media only screen and (min-width: 1441px)
+    //                     font-size: 65px
+    //                     line-height: 70px
+    //             p
+    //                 color: $white
+    //                 text-transform: uppercase
+    //                 margin-bottom: 0
+    //                 font-size: 11px
+    //                 line-height: 16px
+    //                 @media only screen and (min-width: 575px)
+    //                     font-size: 12px
+    //                     line-height: 18px
+    //                 @media only screen and (min-width: 992px)
+    //                     font-size: 13px
+    //                     line-height: 22px
+
+    #advertiseSliderSec
+        @media only screen and (min-width: 992px)
+            padding: 0 30px
+        @media only screen and (min-width: 1441px)
+            padding: 0 60px
+        @media only screen and (min-width: 1551px)
+            padding: 0 155px
+        .imgBox
+            img
+                @include imgFit
+        .advertiseSlider
+            .owl-dots
+                margin-top: -20px
+                position: relative
+                z-index: 9
+                @media only screen and (min-width: 468px)
+                    margin-top: -25px
+                @media only screen and (min-width: 575px)
+                    margin-top: -30px
+                @media only screen and (min-width: 768px)
+                    margin-top: -35px
+                @media only screen and (min-width: 992px)
+                    margin-top: -40px
+                @media only screen and (min-width: 1200px)
+                    margin-top: -50px
+                @media only screen and (min-width: 1441px)
+                    margin-top: -60px
+                button
+                    opacity: 1
+                    background: $white !important
+                    width: 6px
+                    height: 6px
+                    margin: 0 6px
+                    @media only screen and (min-width: 575px)
+                        width: 8px
+                        height: 8px
+                        margin: 0 8px
+                    &.active
+                        background: $basecolor !important
+
+    .advSec
+        .billListing
+            justify-content: center
+            &>*
+                width: 100%
+                @media only screen and (min-width: 468px)
+                    width: calc( 100% / 2 ) !important
+                @media only screen and (min-width: 992px)
+                    width: calc( 100% / 3 ) !important
