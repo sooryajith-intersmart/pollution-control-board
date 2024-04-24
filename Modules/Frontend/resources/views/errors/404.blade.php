@@ -1,7 +1,7 @@
 @extends('frontend::layouts.app')
 @section('title', '404 - Page Not Found')
 @section('content')
-<div id="pageWrapper" class="errorPage NOBanner">
+<div id="pageWrapper">
     <section>
         <div class="container">
             <div class="row">
@@ -12,7 +12,7 @@
                     <p>The page you are looking for does not exist. It may have been moved, or removed altogether. </p>
                     <p>Perhaps you can return back to the site’s homepage and see if you can find what you are looking
                         for.</p>
-                    <a href="{{ route('home') }}" class="btn hoveranim">
+                    <a href="{{ route('screen-1') }}" class="btn hoveranim">
                         <span>Back to homepage</span>
                     </a>
                 </div>
