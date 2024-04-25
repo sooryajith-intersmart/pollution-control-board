@@ -266,7 +266,7 @@
                                     <div class="BoxTitle">noise</div>
                                     <div class="Box Noise">
                                         <div class="GaugeSec">
-                                            <svg width="234" height="123" viewBox="0 0 234 123" fill="none"
+                                            <svg width="225" height="123" viewBox="0 0 234 123" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M52.4216 122.774C52.5906 112.386 55.3843 102.631 60.1788 94.1247L20.7428 71.6237C18.6994 70.4578 16.0899 71.1623 14.9999 73.2472C7.85929 86.9046 3.52539 102.228 2.74781 118.47C2.63442 120.839 4.55921 122.774 6.93034 122.774H52.4216Z"
@@ -530,7 +530,7 @@
                                     <div class="BoxTitle">pressure</div>
                                     <div class="Box Pressure">
                                         <div class="GaugeSec">
-                                            <svg width="242" height="123" viewBox="0 0 242 123" fill="none"
+                                            <svg width="225" height="123" viewBox="0 0 242 123" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M56.2948 122.645C56.4611 112.427 59.2092 102.83 63.9255 94.4632L25.1326 72.329C23.1224 71.1821 20.5555 71.8751 19.4832 73.926C12.4591 87.3608 8.19587 102.434 7.43096 118.412C7.31942 120.742 9.21283 122.645 11.5453 122.645H56.2948Z"

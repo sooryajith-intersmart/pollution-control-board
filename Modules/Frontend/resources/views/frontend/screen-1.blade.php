@@ -266,7 +266,7 @@
                                     <div class="BoxTitle">Humidity</div>
                                     <div class="Box HumiditY">
                                         <div class="GaugeSec">
-                                            <svg width="230" height="123" viewBox="0 0 230 123" fill="none"
+                                            <svg width="225" height="123" viewBox="0 0 230 123" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M53.4215 122.774C53.5906 112.386 56.3843 102.631 61.1787 94.1248L21.7428 71.6238C19.6993 70.4579 17.0899 71.1623 15.9998 73.2472C8.85922 86.9047 4.52533 102.228 3.74775 118.47C3.63436 120.839 5.55915 122.774 7.93028 122.774H53.4215Z"
@@ -517,7 +517,7 @@
                                     <div class="BoxTitle">Temperature</div>
                                     <div class="Box Temperature">
                                         <div class="GaugeSec">
-                                            <svg width="227" height="124" viewBox="0 0 227 124" fill="none"
+                                            <svg width="225" height="123" viewBox="0 0 227 124" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M52.2948 123.645C52.4611 113.426 55.2093 103.83 59.9255 95.463L21.1326 73.3289C19.1225 72.182 16.5556 72.875 15.4833 74.9259C8.45915 88.3606 4.19593 103.434 3.43102 119.412C3.31948 121.741 5.21289 123.645 7.54536 123.645H52.2948Z"

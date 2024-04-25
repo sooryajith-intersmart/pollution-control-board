@@ -265,7 +265,7 @@
                                     <div class="BoxTitle">PM 2.5</div>
                                     <div class="Box PM25">
                                         <div class="GaugeSec">
-                                            <svg width="241" height="124" viewBox="0 0 241 124" fill="none"
+                                            <svg width="225" height="123" viewBox="0 0 241 124" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M57.4216 123.774C57.5906 113.386 60.3843 103.631 65.1788 95.1246L25.7428 72.6237C23.6994 71.4577 21.0899 72.1622 19.9999 74.2471C12.8593 87.9046 8.52539 103.227 7.74781 119.47C7.63442 121.839 9.55921 123.774 11.9303 123.774H57.4216Z"
@@ -615,7 +615,7 @@
                                     <div class="BoxTitle">PM 10</div>
                                     <div class="Box PM10">
                                         <div class="GaugeSec">
-                                            <svg width="238" height="124" viewBox="0 0 238 124" fill="none"
+                                            <svg width="225" height="123" viewBox="0 0 238 124" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M170.101 93.7686L208.808 71.6813C210.85 70.5162 211.543 67.8965 210.259 65.9279C201.754 52.8956 190.498 41.7851 177.302 33.3902C175.347 32.1463 172.773 32.8278 171.604 34.8287L149.224 73.1362C157.778 78.2121 164.961 85.3114 170.097 93.7647L170.101 93.7686Z"

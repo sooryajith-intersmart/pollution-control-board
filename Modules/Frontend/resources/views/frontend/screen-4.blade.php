@@ -266,7 +266,7 @@
                                     <div class="BoxTitle">CO</div>
                                     <div class="Box CO">
                                         <div class="GaugeSec">
-                                            <svg width="242" height="126" viewBox="0 0 242 126" fill="none"
+                                            <svg width="225" height="123" viewBox="0 0 242 126" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M58.4216 125.774C58.5906 115.386 61.3843 105.631 66.1788 97.1247L26.7428 74.6237C24.6994 73.4578 22.0899 74.1623 20.9999 76.2472C13.8593 89.9046 9.52539 105.228 8.74781 121.47C8.63442 123.839 10.5592 125.774 12.9303 125.774H58.4216Z"
@@ -604,7 +604,7 @@
                                     <div class="BoxTitle">CO2</div>
                                     <div class="Box CO2">
                                         <div class="GaugeSec">
-                                            <svg width="238" height="122" viewBox="0 0 238 122" fill="none"
+                                            <svg width="225" height="123" viewBox="0 0 238 122" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M59.2948 121.645C59.4611 111.426 62.2092 101.83 66.9255 93.4631L28.1326 71.329C26.1224 70.1821 23.5555 70.8751 22.4832 72.926C15.4591 86.3607 11.1959 101.434 10.431 117.412C10.3194 119.741 12.2128 121.645 14.5453 121.645H59.2948Z"

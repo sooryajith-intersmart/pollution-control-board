@@ -266,7 +266,7 @@
                                     <div class="BoxTitle">UV dial</div>
                                     <div class="Box UVDial">
                                         <div class="GaugeSec">
-                                            <svg width="223" height="123" viewBox="0 0 223 123" fill="none"
+                                            <svg width="225" height="123" viewBox="0 0 223 123" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M50.7407 122.623C50.9088 112.295 53.6866 102.596 58.4535 94.1387L19.2435 71.7667C17.2118 70.6074 14.6173 71.3079 13.5335 73.3808C6.43385 86.96 2.12479 102.195 1.35166 118.345C1.23893 120.7 3.15268 122.623 5.51023 122.623H50.7407Z"
@@ -476,7 +476,7 @@
                                     <div class="BoxTitle">Light intensity </div>
                                     <div class="Box Lightintensity ">
                                         <div class="GaugeSec">
-                                            <svg width="234" height="123" viewBox="0 0 234 123" fill="none"
+                                            <svg width="225" height="123" viewBox="0 0 234 123" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M55.2948 122.645C55.4611 112.427 58.2092 102.83 62.9255 94.4632L24.1326 72.329C22.1224 71.1821 19.5555 71.8751 18.4832 73.926C11.4591 87.3608 7.19587 102.434 6.43096 118.412C6.31942 120.742 8.21283 122.645 10.5453 122.645H55.2948Z"
