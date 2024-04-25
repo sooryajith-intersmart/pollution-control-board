@@ -9,6 +9,8 @@ $(document).ready(function () {
             $('.aqi-percentage').attr('data-value', response.data.aqi.percentage);
             setBackgroundBasedOnLevel(response.data.aqi.level_number, '.aqi-level-background');
             setColorBasedOnLevel(response.data.aqi.level_number, '.aqi-level-color');
+            setFillBasedOnLevel(response.data.aqi.level_number,
+                '.aqi-level-fill');
             $('.aqi-level-name').text(response.data.aqi.level_name);
             // humidity
             $('.humidity-value').attr('data-count', response.data.humidity.value);
@@ -24,6 +26,8 @@ $(document).ready(function () {
                 '.temperature-level-background');
             setColorBasedOnLevel(response.data.temperature.level_number,
                 '.temperature-level-color');
+            setFillBasedOnLevel(response.data.temperature.level_number,
+                '.temperature-level-fill');
             $('.temperature-level-name').text(response.data.temperature.level_name);
             // pm25
             $('.pm25-value').attr('data-count', response.data.pm25.value);
@@ -168,5 +172,33 @@ $(document).ready(function () {
         }
         // Set the color of the element
         $(elementClass).css('color', color);
+    }
+
+    function setFillBasedOnLevel(levelNumber, elementClass) {
+        var fill;
+        switch (levelNumber) {
+            case 1:
+                fill = 'var(--level1)';
+                break;
+            case 2:
+                fill = 'var(--level2)';
+                break;
+            case 3:
+                fill = 'var(--level3)';
+                break;
+            case 4:
+                fill = 'var(--level4)';
+                break;
+            case 5:
+                fill = 'var(--level5)';
+                break;
+            case 6:
+                fill = 'var(--level6)';
+                break;
+            default:
+                fill = 'var(--default-fill)';
+        }
+        // Set the fill of the element
+        $(elementClass).css('fill', fill);
     }
 });

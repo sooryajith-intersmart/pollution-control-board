@@ -189,7 +189,7 @@ svg
     margin-right: auto
     margin-left: auto
     max-width: 100%
-    padding: 15px 15px 35px
+    padding: 25px 15px 35px
 
 //MIXINS
 @mixin display
@@ -238,14 +238,13 @@ svg
     font-family: $fontstack2
     font-optical-sizing: auto
     color: #000
-    // font-size: calc(30px + 1.2vw)
-    font-size: 30px
+    font-size: clamp(30px, 3vw, 50px)
     font-style: normal
     font-weight: 900
     line-height: normal
     text-transform: uppercase
     text-align: center
-    margin-bottom: 15px
+    margin-bottom: 30px
 .Screens
     position: relative
     width: 100vw
@@ -257,25 +256,29 @@ svg
         top: 0
         width: 100%
         height: 100%
-        video
+        video, figure, img
             @include imgFit
     .container
         position: relative
         z-index: 1
-        max-width: 800px
+        // max-width: 800px
     .Row
         margin: -2.6px
+        justify-content: center
         @include display
     .Col
         padding: 2.6px
-        width: calc(100% / 3)
+        width: calc(100% / 2)
+        @media only screen and (min-width: 1070px)
+            width: calc(100% / 3)
+
     .BoxTitle
         font-family: $fontstack2
         font-optical-sizing: auto
         color: #000
         text-transform: uppercase
         // font-size: calc(20px + 1.5vw)
-        font-size: 20px
+        font-size: clamp(20px,2.2vw,44px)
         font-style: normal
         font-weight: 700
         line-height: normal
@@ -301,6 +304,11 @@ svg
         .GaugeSec
             position: relative
             overflow: hidden
+            svg
+                width: 100%
+                height: 100%
+                display: block
+                margin: auto
         .NeedleWrp
             position: absolute
             bottom: 0
@@ -331,9 +339,7 @@ svg
                 transition: all 1s ease-in-out
                 left: 50%
                 bottom: 0
-                width: 120px
-                @media only screen and (min-width: 400px)
-                    width: 75px
+                width: calc(100vw / 9.5)
                 // position: absolute
                 // width: 100%
                 // height: calc(100% + 0px)
@@ -359,29 +365,40 @@ svg
             border-radius: 150px 150px 0 0
             padding-bottom: 4px
             z-index: 1
-            max-width: 90px
+            max-width: calc(100vw / 3 - 0px)
             .IndexValue
                 text-align: center
                 font-style: normal
                 font-weight: 700
-                font-size: 16px
-                line-height: 16px
                 display: flex
                 align-items: flex-end
+                font-size: clamp(16px,2vw,32px)
+                line-height: clamp(16px,2vw,32px)
+                @media only screen and (min-width: 1900px)
+                    font-size: clamp(16px,5vw,55px)
+                    line-height: clamp(16px,5vw,55px)
+
             .Symbol
                 margin-left: 1px
                 font-size: 12px
-                line-height: 12px
+                font-size: clamp(12px,2vw,32px)
+                line-height: clamp(12px,2vw,32px)
                 svg
-                    width: 100%
+                    width: clamp(16px,4vw,68px)
                     height: 100%
-                    max-height: 11px
+                    &#Celcus
+                        width: clamp(16px,2vw,26px)
+                    &#ugM3
+                        width: clamp(16px,3vw,55px)
+                    &#mgM3
+                        width: clamp(16px,3vw,64px)
+
         .LevelsOfConcern
             color: #FFF
             text-align: center
             // font-size: calc(18.51px + 1.2vw)
-            font-size: 14px
-            line-height: 14px
+            font-size: clamp(14px,2vw,35px)
+            line-height: clamp(14px,2vw,35px)
             font-style: normal
             font-weight: 700
             text-transform: uppercase
@@ -393,7 +410,7 @@ svg
             min-height: 29px
             flex-shrink: 0
             margin-top: 15px
-            padding: 0 20px
+            padding: 12px 20px
             @include center
         &.AQI
             --level1: #6BCE59
@@ -562,20 +579,35 @@ svg
         .DFleX
             @include display
             .ImgBoX
-                width: 212px
                 border-radius: 4px
                 overflow: hidden
+                min-width: 180px
+                width: 100%
+                @media (max-height: 1130px) and (max-width: 680px)
+                    height: 170px
+                @media only screen and (min-width: 680px)
+                    width: 25%
                 img
                     @include imgFit
             .CntnBoX
                 background: #fff
-                width: calc(100% - 212px - 20px)
                 border-radius: 4px
-                margin-left: 20px
-                padding: 15px 55px 15px 50px
                 font-family: $fontstack2
-                font-size: 22.19px
+                font-size: clamp(22.19px,2vw,40px)
                 font-weight: 800
+                display: flex
+                align-items: center
+                padding: 15px 20px 15px 25px
+                width: 100%
+                margin-top: 20px
+                @media only screen and (min-width: 680px)
+                    width: calc(75% - 20px)
+                    max-width: calc(100% - 180px - 20px)
+                    margin-left: 20px
+                    margin-top: 0px
+                @media only screen and (min-width: 768px)
+                    padding: 15px 55px 15px 50px
+
                 .TXT
                     background: url('../images/FootBoxBG.gif')
                     background-size: cover
