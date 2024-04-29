@@ -434,6 +434,13 @@ svg
             .GuageValueWrp
                 .IndexValue
                     color: var(--level3)
+                .Symbol
+                    font-weight: 700
+                    font-size: clamp(16px,2vw,32px)
+                    line-height: clamp(16px,2vw,32px)
+                    @media only screen and (min-width: 1900px)
+                        font-size: clamp(16px,5vw,55px)
+                        line-height: clamp(16px,5vw,55px)
             .LevelsOfConcern
                 background: var(--level3)
         &.Temperature
