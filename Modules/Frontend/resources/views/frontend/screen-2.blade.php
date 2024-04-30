@@ -940,15 +940,15 @@
                                                 <div class="DFleX">
                                                     <div class="ImgBoX">
                                                         <img decoding="async" fetchpriority="low"
-                                                            src="{{ asset('frontend/images/AreaImg.jpg') }}"
+                                                            src="{{ asset('frontend/images/Screen2Slide1.jpg') }}"
                                                             alt="Small Image" width="156" height="141" loading="lazy"
-                                                            srcset="{{ asset('frontend/images/AreaImg.jpg') }} 300w, {{ asset('frontend/images/AreaImg.jpg') }} 768w"
+                                                            srcset="{{ asset('frontend/images/Screen2Slide1.jpg') }} 300w, {{ asset('frontend/images/Screen2Slide1.jpg') }} 768w"
                                                             sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33.3vw">
                                                     </div>
                                                     <div class="CntnBoX">
                                                         <div class="TXT">
-                                                            Encourage sustainable urban planning and
-                                                            transportation initiatives
+                                                            Clear the air, breathe easy: fight Particulate Matter
+                                                            pollution
                                                         </div>
                                                     </div>
                                                 </div>
@@ -957,15 +957,14 @@
                                                 <div class="DFleX">
                                                     <div class="ImgBoX">
                                                         <img decoding="async" fetchpriority="low"
-                                                            src="{{ asset('frontend/images/AreaImg.jpg') }}"
+                                                            src="{{ asset('frontend/images/Screen2Slide2.jpg') }}"
                                                             alt="Small Image" width="156" height="141" loading="lazy"
-                                                            srcset="{{ asset('frontend/images/AreaImg.jpg') }} 300w, {{ asset('frontend/images/AreaImg.jpg') }} 768w"
+                                                            srcset="{{ asset('frontend/images/Screen2Slide2.jpg') }} 300w, {{ asset('frontend/images/Screen2Slide2.jpg') }} 768w"
                                                             sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33.3vw">
                                                     </div>
                                                     <div class="CntnBoX">
                                                         <div class="TXT">
-                                                            Choose biking over driving whenever possible and
-                                                            promote a healthier environment.
+                                                            Pledge for purer air and a brighter future
                                                         </div>
                                                     </div>
                                                 </div>
@@ -974,15 +973,14 @@
                                                 <div class="DFleX">
                                                     <div class="ImgBoX">
                                                         <img decoding="async" fetchpriority="low"
-                                                            src="{{ asset('frontend/images/AreaImg.jpg') }}"
+                                                            src="{{ asset('frontend/images/Screen2Slide3.jpg') }}"
                                                             alt="Small Image" width="156" height="141" loading="lazy"
-                                                            srcset="{{ asset('frontend/images/AreaImg.jpg') }} 300w, {{ asset('frontend/images/AreaImg.jpg') }} 768w"
+                                                            srcset="{{ asset('frontend/images/Screen2Slide3.jpg') }} 300w, {{ asset('frontend/images/Screen2Slide3.jpg') }} 768w"
                                                             sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33.3vw">
                                                     </div>
                                                     <div class="CntnBoX">
                                                         <div class="TXT">
-                                                            Embrace green practices & renewable energy to
-                                                            protect our planet.
+                                                            Drive less, go green : beat Particulate Matter pollution
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1062,7 +1060,7 @@ document.addEventListener("DOMContentLoaded", function() {
         type: 'fade',
         rewind: true,
         autoplay: true,
-        interval: 1666,
+        interval: 5000,
         perPage: 1,
         drag: false,
         pagination: true,
