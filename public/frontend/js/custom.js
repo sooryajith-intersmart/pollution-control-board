@@ -9,8 +9,6 @@ $(document).ready(function () {
             $('.aqi-percentage').attr('data-value', response.data.aqi.percentage);
             setBackgroundBasedOnLevel(response.data.aqi.level_number, '.aqi-level-background');
             setColorBasedOnLevel(response.data.aqi.level_number, '.aqi-level-color');
-            setFillBasedOnLevel(response.data.aqi.level_number,
-                '.aqi-level-fill');
             $('.aqi-level-name').text(response.data.aqi.level_name);
             // humidity
             $('.humidity-value').attr('data-count', response.data.humidity.value);
@@ -34,36 +32,48 @@ $(document).ready(function () {
             $('.pm25-percentage').attr('data-value', response.data.pm25.percentage);
             setBackgroundBasedOnLevel(response.data.pm25.level_number, '.pm25-level-background');
             setColorBasedOnLevel(response.data.pm25.level_number, '.pm25-level-color');
+            setFillBasedOnLevel(response.data.pm25.level_number,
+                '.pm25-level-fill');
             $('.pm25-level-name').text(response.data.pm25.level_name);
             // pm10
             $('.pm10-value').attr('data-count', response.data.pm10.value);
             $('.pm10-percentage').attr('data-value', response.data.pm10.percentage);
             setBackgroundBasedOnLevel(response.data.pm10.level_number, '.pm10-level-background');
             setColorBasedOnLevel(response.data.pm10.level_number, '.pm10-level-color');
+            setFillBasedOnLevel(response.data.pm10.level_number,
+                '.pm10-level-fill');
             $('.pm10-level-name').text(response.data.pm10.level_name);
             // pm1
             $('.pm1-value').attr('data-count', response.data.pm1.value);
             $('.pm1-percentage').attr('data-value', response.data.pm1.percentage);
             setBackgroundBasedOnLevel(response.data.pm1.level_number, '.pm1-level-background');
             setColorBasedOnLevel(response.data.pm1.level_number, '.pm1-level-color');
+            setFillBasedOnLevel(response.data.pm1.level_number,
+                '.pm1-level-fill');
             $('.pm1-level-name').text(response.data.pm1.level_name);
             // pm100
             $('.pm100-value').attr('data-count', response.data.pm100.value);
             $('.pm100-percentage').attr('data-value', response.data.pm100.percentage);
             setBackgroundBasedOnLevel(response.data.pm100.level_number, '.pm100-level-background');
             setColorBasedOnLevel(response.data.pm100.level_number, '.pm100-level-color');
+            setFillBasedOnLevel(response.data.pm100.level_number,
+                '.pm100-level-fill');
             $('.pm100-level-name').text(response.data.pm100.level_name);
             // co
             $('.co-value').attr('data-count', response.data.co.value);
             $('.co-percentage').attr('data-value', response.data.co.percentage);
             setBackgroundBasedOnLevel(response.data.co.level_number, '.co-level-background');
             setColorBasedOnLevel(response.data.co.level_number, '.co-level-color');
+            setFillBasedOnLevel(response.data.co.level_number,
+                '.co-level-fill');
             $('.co-level-name').text(response.data.co.level_name);
             // co2
             $('.co2-value').attr('data-count', response.data.co2.value);
             $('.co2-percentage').attr('data-value', response.data.co2.percentage);
             setBackgroundBasedOnLevel(response.data.co2.level_number, '.co2-level-background');
             setColorBasedOnLevel(response.data.co2.level_number, '.co2-level-color');
+            setFillBasedOnLevel(response.data.co2.level_number,
+                '.co2-level-fill');
             $('.co2-level-name').text(response.data.co2.level_name);
             // noise
             $('.noise-value').attr('data-count', response.data.noise.value);
