@@ -218,34 +218,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     InnerSlide.mount();
 
-    function animateCount() {
-        $('.IndexValue .Count').each(function() {
-            var $this = $(this),
-                countTo = $this.attr('data-count');
-
-            $({
-                countNum: $this.text()
-            }).animate({
-                countNum: countTo
-            }, {
-                duration: 2000,
-                easing: 'linear',
-                step: function() {
-                    $this.text(Math.floor(this.countNum));
-                },
-                complete: function() {
-                    $this.text(Math.floor(this
-                        .countNum)); // Ensure the count ends with a whole number
-                }
-            });
-        });
-    }
-
-    animateCount();
-
-    // Update count to 0 for non-active slides
-    $('.IndexValue .Count').text(0);
-
     function animateArrow(arrow, initialValue, finalValue) {
         const duration = 500; // milliseconds
         const startTime = performance.now();

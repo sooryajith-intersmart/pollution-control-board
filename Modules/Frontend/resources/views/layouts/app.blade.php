@@ -85,6 +85,7 @@
     </div>
 
     @stack('js')
+
     <script async type="text/javascript" src="{{ asset('frontend/js/app.js') }}"></script>
     <script async type="text/javascript" src="{{ asset('frontend/js/custom.js') }}"></script>
 </body>

@@ -119,10 +119,14 @@ $(document).ready(function () {
                     duration: 2000,
                     easing: 'linear',
                     step: function() {
-                        $this.text(parseFloat(this.countNum).toFixed(1));
+                        $this.text(parseFloat(this.countNum).toFixed(2));
                     },
                     complete: function() {
-                        $this.text(parseFloat(this.countNum).toFixed(1));
+                        if (this.countNum % 1 === 0) {
+                            $this.text(parseInt(this.countNum, 10));
+                        } else {
+                            $this.text(parseFloat(this.countNum).toFixed(2));
+                        }
                         $this.attr('aria-busy', 'false');
                     }
                 });
