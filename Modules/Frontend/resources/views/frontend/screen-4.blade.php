@@ -16,7 +16,7 @@
                         <div class="Box AQI">
                             <div class="GaugeSec">
                                 <figure>
-                                    <img src="{{ asset('frontend/images/AQI.svg') }}" width="226" height="117"
+                                    <img src="{{ asset('frontend/images/AQId.svg') }}" width="226" height="117"
                                         alt="Background">
                                 </figure>
                                 <div class="NeedleWrp">

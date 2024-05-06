@@ -39,7 +39,7 @@
                         <div class="Box Noise">
                             <div class="GaugeSec">
                                 <figure>
-                                    <img src="{{ asset('frontend/images/Noise.svg') }}" width="226" height="117"
+                                    <img src="{{ asset('frontend/images/Noised.svg') }}" width="226" height="117"
                                         alt="Background">
                                 </figure>
                                 <div class="NeedleWrp">
@@ -64,7 +64,7 @@
                         <div class="Box Pressure">
                             <div class="GaugeSec">
                                 <figure>
-                                    <img src="{{ asset('frontend/images/Pressure.svg') }}" width="226" height="117"
+                                    <img src="{{ asset('frontend/images/Pressured.svg') }}" width="226" height="117"
                                         alt="Background">
                                 </figure>
                                 <div class="NeedleWrp">

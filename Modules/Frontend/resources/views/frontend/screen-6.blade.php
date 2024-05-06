@@ -62,7 +62,7 @@
                         <div class="Box Lightintensity ">
                             <div class="GaugeSec">
                                 <figure>
-                                    <img src="{{ asset('frontend/images/Lightintensity.svg') }}" width="226"
+                                    <img src="{{ asset('frontend/images/Lightintensityd.svg') }}" width="226"
                                         height="117" alt="Background">
                                 </figure>
                                 <div class="NeedleWrp">
