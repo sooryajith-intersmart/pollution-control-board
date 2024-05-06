@@ -104,10 +104,13 @@ $(document).ready(function () {
             setColorBasedOnLevel(response.data.light_intensity.level_number,
                 '.light_intensity-level-color');
             $('.light_intensity-level-name').text(response.data.light_intensity.level_name);
-            $('.IndexValue .Count').each(function () {
+            $('.IndexValue .Count').each(function() {
                 var $this = $(this),
                     countTo = $this.attr('data-count');
-
+        
+                $this.attr('aria-live', 'polite');
+                $this.attr('aria-busy', 'true');
+        
                 $({
                     countNum: $this.text()
                 }).animate({
@@ -115,13 +118,12 @@ $(document).ready(function () {
                 }, {
                     duration: 2000,
                     easing: 'linear',
-                    step: function () {
-                        $this.text(Math.floor(this.countNum));
+                    step: function() {
+                        $this.text(parseFloat(this.countNum).toFixed(1));
                     },
-                    complete: function () {
-                        $this.text(Math.floor(this
-                            .countNum
-                        )); // Ensure the count ends with a whole number
+                    complete: function() {
+                        $this.text(parseFloat(this.countNum).toFixed(1));
+                        $this.attr('aria-busy', 'false');
                     }
                 });
             });
