@@ -104,13 +104,14 @@ $(document).ready(function () {
             setColorBasedOnLevel(response.data.light_intensity.level_number,
                 '.light_intensity-level-color');
             $('.light_intensity-level-name').text(response.data.light_intensity.level_name);
-            $('.IndexValue .Count').each(function() {
+
+            $('.IndexValue .Count').each(function () {
                 var $this = $(this),
                     countTo = $this.attr('data-count');
-        
+
                 $this.attr('aria-live', 'polite');
                 $this.attr('aria-busy', 'true');
-        
+
                 $({
                     countNum: $this.text()
                 }).animate({
@@ -118,14 +119,22 @@ $(document).ready(function () {
                 }, {
                     duration: 2000,
                     easing: 'linear',
-                    step: function() {
-                        $this.text(parseFloat(this.countNum).toFixed(2));
-                    },
-                    complete: function() {
-                        if (this.countNum % 1 === 0) {
-                            $this.text(parseInt(this.countNum, 10));
-                        } else {
+                    step: function () {
+                        if ($this.hasClass('co-value') || $this.hasClass('uv-value')) {
                             $this.text(parseFloat(this.countNum).toFixed(2));
+                        } else {
+                            $this.text(Math.round(parseFloat(this.countNum)));
+                        }
+                    },
+                    complete: function () {
+                        if ($this.hasClass('co-value') || $this.hasClass('uv-value')) {
+                            if (this.countNum % 1 === 0) {
+                                $this.text(parseInt(this.countNum, 10));
+                            } else {
+                                $this.text(parseFloat(this.countNum).toFixed(2));
+                            }
+                        } else {
+                            $this.text(Math.round(parseFloat(this.countNum)));
                         }
                         $this.attr('aria-busy', 'false');
                     }
