@@ -7,6 +7,16 @@ use Illuminate\Routing\Controller;
 class FrontendController extends Controller
 {
     /**
+     * Displays home page.
+     * 
+     * @author Sooryajith
+     */
+    public function index()
+    {
+        return view('frontend::frontend.index');
+    }
+
+    /**
      * Displays screen 1 page.
      * 
      * @author Sooryajith
