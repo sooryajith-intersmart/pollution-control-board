@@ -10,9 +10,9 @@
             </div> -->
             <div class="container">
                 <div class="Banner">
-                    <figure><img src="{{ asset('frontend/images/Screen1BG.jpg') }}" alt="Background">
+                    <figure><img src="{{ asset('frontend/images/RotaryCochin.jpg') }}" alt="Background">
                     </figure>
-                    <div class="MainHead">Real-time Pollution Monitor</div>
+                    <!-- <div class="MainHead">Real-time Pollution Monitor</div> -->
                 </div>
                 <div class="Row">
                     <div class="Col AQICol">
