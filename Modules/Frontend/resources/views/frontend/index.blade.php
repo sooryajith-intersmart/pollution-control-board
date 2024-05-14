@@ -316,7 +316,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="FootBox">
+                <div class="FootBox">
                     <div class="InnerSlide splide" role="group" aria-label="Splide Basic HTML Example">
                         <div class="splide__track">
                             <ul class="splide__list">
@@ -360,7 +360,7 @@
                             </ul>
                         </div>
                     </div>
-                </div> -->
+                </div>
             </div>
         </div>
         <div id="Screen2" class="Screens">
@@ -458,7 +458,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="FootBox">
+                <div class="FootBox">
                     <div class="InnerSlide2 splide" role="group" aria-label="Splide Basic HTML Example">
                         <div class="splide__track">
                             <ul class="splide__list">
@@ -502,7 +502,7 @@
                             </ul>
                         </div>
                     </div>
-                </div> -->
+                </div>
             </div>
         </div>
         <div id="Screen3" class="Screens">
@@ -599,7 +599,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="FootBox">
+                <div class="FootBox">
                     <div class="InnerSlide3 splide" role="group" aria-label="Splide Basic HTML Example">
                         <div class="splide__track">
                             <ul class="splide__list">
@@ -644,7 +644,7 @@
                             </ul>
                         </div>
                     </div>
-                </div> -->
+                </div>
             </div>
         </div>
         <div id="Screen4" class="Screens">
@@ -743,7 +743,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="FootBox">
+                <div class="FootBox">
                     <div class="InnerSlide4 splide" role="group" aria-label="Splide Basic HTML Example">
                         <div class="splide__track">
                             <ul class="splide__list">
@@ -786,7 +786,7 @@
                             </ul>
                         </div>
                     </div>
-                </div> -->
+                </div>
             </div>
         </div>
         <div id="Screen5" class="Screens">
@@ -849,7 +849,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="FootBox">
+                <div class="FootBox">
                     <div class="InnerSlide5 splide" role="group" aria-label="Splide Basic HTML Example">
                         <div class="splide__track">
                             <ul class="splide__list">
@@ -892,7 +892,7 @@
                             </ul>
                         </div>
                     </div>
-                </div> -->
+                </div>
             </div>
         </div>
         <div id="Screen6" class="Screens">
@@ -953,7 +953,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="FootBox">
+                <div class="FootBox">
                     <div class="InnerSlide6 splide" role="group" aria-label="Splide Basic HTML Example">
                         <div class="splide__track">
                             <ul class="splide__list">
@@ -997,7 +997,7 @@
                             </ul>
                         </div>
                     </div>
-                </div> -->
+                </div>
             </div>
         </div>
     </section>
@@ -1039,7 +1039,7 @@ document.addEventListener("DOMContentLoaded", function() {
         type: 'fade',
         rewind: true,
         autoplay: true,
-        interval: 1666,
+        interval: 5000,
         perPage: 1,
         drag: false,
         pagination: true,
@@ -1051,7 +1051,7 @@ document.addEventListener("DOMContentLoaded", function() {
         type: 'fade',
         rewind: true,
         autoplay: true,
-        interval: 1666,
+        interval: 5000,
         perPage: 1,
         drag: false,
         pagination: true,
@@ -1063,7 +1063,7 @@ document.addEventListener("DOMContentLoaded", function() {
         type: 'fade',
         rewind: true,
         autoplay: true,
-        interval: 1666,
+        interval: 5000,
         perPage: 1,
         drag: false,
         pagination: true,
@@ -1075,7 +1075,7 @@ document.addEventListener("DOMContentLoaded", function() {
         type: 'fade',
         rewind: true,
         autoplay: true,
-        interval: 1666,
+        interval: 5000,
         perPage: 1,
         drag: false,
         pagination: true,
@@ -1087,7 +1087,7 @@ document.addEventListener("DOMContentLoaded", function() {
         type: 'fade',
         rewind: true,
         autoplay: true,
-        interval: 1666,
+        interval: 5000,
         perPage: 1,
         drag: false,
         pagination: true,
