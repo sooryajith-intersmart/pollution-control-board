@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Request;
 | contains the "web" middleware group. Now create something great!
 |
 */
-$allowed_domain = "envirowatch.rotarycochin.com ";
+$allowed_domain = "envirowatch.rotarycochin.com";
 
 if (Request::getHost() === $allowed_domain) {
     Route::get('/', [FrontendController::class, 'index'])->name('home');
