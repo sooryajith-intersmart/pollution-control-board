@@ -14,7 +14,12 @@ use Modules\Frontend\app\Http\Controllers\FrontendController;
 |
 */
 
-Route::get('/', [FrontendController::class, 'index'])->name('home');
+$allowed_domain = "pollution-control-board.laravel.intersmarthosting.in";
+if ($_SERVER['HTTP_HOST'] !== $allowed_domain || $_SERVER['HTTPS'] !== 'on') {
+    Route::redirect('/', '/screen-1');
+}else{
+    Route::get('/', [FrontendController::class, 'index'])->name('home');
+}
 Route::get('/screen-1', [FrontendController::class, 'screen1'])->name('screen-1');
 Route::get('/screen-2', [FrontendController::class, 'screen2'])->name('screen-2');
 Route::get('/screen-3', [FrontendController::class, 'screen3'])->name('screen-3');
