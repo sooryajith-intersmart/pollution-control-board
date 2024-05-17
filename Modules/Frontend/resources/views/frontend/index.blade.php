@@ -1,5 +1,5 @@
 @extends('frontend::layouts.app')
-@section('title', 'AQI')
+@section('title', 'Enviro Watch : Real-time Pollution Monitoring System')
 @section('content')
 <div id="pageWrapper">
     <section class="MainSlide SinglePage">
