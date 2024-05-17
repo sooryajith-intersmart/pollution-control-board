@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Modules\Frontend\app\Http\Controllers\FrontendController;
 use Illuminate\Support\Facades\Request;
+use Illuminate\Http\Response;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +20,10 @@ $allowed_domain = "envirowatch.rotarycochin.com";
 
 if (Request::getHost() === $allowed_domain) {
     Route::get('/', [FrontendController::class, 'index'])->name('home');
+    Route::get('/get-latest-devices-data', [FrontendController::class, 'getLatestDevicesData'])->name('get-latest-devices-data');
+    Route::fallback(function () {
+        return redirect()->route('home');
+    });
 } else {
     Route::redirect('/', '/screen-1');
     Route::get('/screen-1', [FrontendController::class, 'screen1'])->name('screen-1');
@@ -27,6 +32,10 @@ if (Request::getHost() === $allowed_domain) {
     Route::get('/screen-4', [FrontendController::class, 'screen4'])->name('screen-4');
     Route::get('/screen-5', [FrontendController::class, 'screen5'])->name('screen-5');
     Route::get('/screen-6', [FrontendController::class, 'screen6'])->name('screen-6');
+    Route::get('/get-latest-devices-data', [FrontendController::class, 'getLatestDevicesData'])->name('get-latest-devices-data');
+    Route::fallback(function () {
+        return redirect()->route('screen-1');
+    });
 }
 
-Route::get('/get-latest-devices-data', [FrontendController::class, 'getLatestDevicesData'])->name('get-latest-devices-data');
+
