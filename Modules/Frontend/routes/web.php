@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Modules\Frontend\app\Http\Controllers\FrontendController;
+use Illuminate\Support\Facades\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,11 +14,11 @@ use Modules\Frontend\app\Http\Controllers\FrontendController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 $allowed_domain = "pollution-control-board.laravel.intersmarthosting.in";
-if ($_SERVER['HTTP_HOST'] !== $allowed_domain || $_SERVER['HTTPS'] !== 'on') {
+
+if (Request::getHost() === $allowed_domain) {
     Route::redirect('/', '/screen-1');
-}else{
+} else {
     Route::get('/', [FrontendController::class, 'index'])->name('home');
 }
 Route::get('/screen-1', [FrontendController::class, 'screen1'])->name('screen-1');
