@@ -14,12 +14,12 @@ use Illuminate\Support\Facades\Request;
 | contains the "web" middleware group. Now create something great!
 |
 */
-$allowed_domain = "pollution-control-board.laravel.intersmarthosting.in";
+$allowed_domain = "envirowatch.rotarycochin.com ";
 
 if (Request::getHost() === $allowed_domain) {
-    Route::redirect('/', '/screen-1');
-} else {
     Route::get('/', [FrontendController::class, 'index'])->name('home');
+} else {
+    Route::redirect('/', '/screen-1');
 }
 Route::get('/screen-1', [FrontendController::class, 'screen1'])->name('screen-1');
 Route::get('/screen-2', [FrontendController::class, 'screen2'])->name('screen-2');
