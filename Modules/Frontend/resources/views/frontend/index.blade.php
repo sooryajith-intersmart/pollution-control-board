@@ -549,7 +549,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="LevelsOfConcern aqi-level-name aqi-level-background"
+                            <div class="LevelsOfConcern pm1-level-name pm1-level-background"
                                 style="background: var(--level1)">
                                 Below normal
                             </div>
