@@ -1,5 +1,6 @@
 $(document).ready(function () {
     function getLatestDevicesData() {
+        var delayTime = 60000; // 1 minute
         $.ajax({
             url: '/get-latest-devices-data',
             type: "get",
@@ -28,7 +29,7 @@ $(document).ready(function () {
                 setFillBasedOnLevel(response.data.temperature.level_number,
                     '.temperature-level-fill');
                 $('.temperature-level-name').text(response.data.temperature.level_name);
-                // pm25
+                // pm2.5
                 $('.pm25-value').attr('data-count', response.data.pm25.value);
                 $('.pm25-percentage').attr('data-value', response.data.pm25.percentage);
                 setBackgroundBasedOnLevel(response.data.pm25.level_number, '.pm25-level-background');
@@ -142,14 +143,23 @@ $(document).ready(function () {
                     });
                 });
             },
+            error: function (xhr, status, error) {
+                // Handle error
+                console.error('Error fetching latest device data:', error);
+                setTimeout(function () {
+                    getLatestDevicesData();
+                }, delayTime);
+            },
+            complete: function () {
+                setTimeout(function () {
+                    getLatestDevicesData();
+                }, delayTime);
+            }
         });
     }
 
     // get latest devices data initially
     getLatestDevicesData();
-
-    // get latest devices data every 1 minute
-    setInterval(getLatestDevicesData, 60000);
 
     function setBackgroundBasedOnLevel(levelNumber, elementClass) {
         var backgroundColor;
