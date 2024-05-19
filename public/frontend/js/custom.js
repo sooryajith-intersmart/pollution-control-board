@@ -90,98 +90,30 @@ $(document).ready(function () {
     function updateSensorData(sensorType, data) {
         $(`.${sensorType}-value`).attr('data-count', data.value);
         $(`.${sensorType}-percentage`).attr('data-value', data.percentage);
-        setBackgroundBasedOnLevel(data.level_number, `.${sensorType}-level-background`);
-        setColorBasedOnLevel(data.level_number, `.${sensorType}-level-color`);
-        if ($(`.${sensorType}-level-fill`).length) {
-            setFillBasedOnLevel(data.level_number, `.${sensorType}-level-fill`);
-        }
+        setStylesBasedOnLevel(data.level_number, sensorType);
         $(`.${sensorType}-level-name`).text(data.level_name);
     }
 
-    // Function to set background color based on the level number
-    function setBackgroundBasedOnLevel(levelNumber, elementClass) {
-        var backgroundColor;
-        switch (levelNumber) {
-            case 1:
-                backgroundColor = 'var(--level1)';
-                break;
-            case 2:
-                backgroundColor = 'var(--level2)';
-                break;
-            case 3:
-                backgroundColor = 'var(--level3)';
-                break;
-            case 4:
-                backgroundColor = 'var(--level4)';
-                break;
-            case 5:
-                backgroundColor = 'var(--level5)';
-                break;
-            case 6:
-                backgroundColor = 'var(--level6)';
-                break;
-            default:
-                backgroundColor = 'var(--default-color)';
-        }
+    // Function to set styles (background, color, fill) based on the level number
+    function setStylesBasedOnLevel(levelNumber, sensorType) {
+        var levelColors = {
+            1: 'var(--level1)',
+            2: 'var(--level2)',
+            3: 'var(--level3)',
+            4: 'var(--level4)',
+            5: 'var(--level5)',
+            6: 'var(--level6)',
+            default: 'var(--default-color)'
+        };
+        var color = levelColors[levelNumber] || levelColors.default;
+
         // Set the background color of the element
-        $(elementClass).css('background', backgroundColor);
-    }
-
-    // Function to set color based on the level number
-    function setColorBasedOnLevel(levelNumber, elementClass) {
-        var color;
-        switch (levelNumber) {
-            case 1:
-                color = 'var(--level1)';
-                break;
-            case 2:
-                color = 'var(--level2)';
-                break;
-            case 3:
-                color = 'var(--level3)';
-                break;
-            case 4:
-                color = 'var(--level4)';
-                break;
-            case 5:
-                color = 'var(--level5)';
-                break;
-            case 6:
-                color = 'var(--level6)';
-                break;
-            default:
-                color = 'var(--default-color)';
-        }
+        $(`.${sensorType}-level-background`).css('background', color);
         // Set the color of the element
-        $(elementClass).css('color', color);
-    }
-
-    // Function to set fill color based on the level number
-    function setFillBasedOnLevel(levelNumber, elementClass) {
-        var fill;
-        switch (levelNumber) {
-            case 1:
-                fill = 'var(--level1)';
-                break;
-            case 2:
-                fill = 'var(--level2)';
-                break;
-            case 3:
-                fill = 'var(--level3)';
-                break;
-            case 4:
-                fill = 'var(--level4)';
-                break;
-            case 5:
-                fill = 'var(--level5)';
-                break;
-            case 6:
-                fill = 'var(--level6)';
-                break;
-            default:
-                fill = 'var(--default-fill)';
+        $(`.${sensorType}-level-color`).css('color', color);
+        // Set the fill color of the element, if it exists
+        if ($(`.${sensorType}-level-fill`).length) {
+            $(`.${sensorType}-level-fill`).css('fill', color);
         }
-        // Set the fill of the element
-        $(elementClass).css('fill', fill);
     }
 });
