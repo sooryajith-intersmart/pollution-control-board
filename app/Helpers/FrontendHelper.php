@@ -108,6 +108,102 @@ class FrontendHelper
     }
 
     /**
+     * Defines the metrics to be analyzed with their respective ranges and descriptive names.
+     * 
+     * @param array $data The raw data from the device.
+     * @return array The defined metrics.
+     * @author Sooryajith
+     */
+    public static function defineMetrics($data)
+    {
+        return [
+            'aqi' => [
+                'value' => $data['aqi'] ?? 0,
+                'ranges' => [50, 100, 200, 300, 400, 500],
+                'names' => ['Good', 'Satisfactory', 'Moderate', 'Poor', 'Very Poor', 'Severe']
+            ],
+            'humidity' => [
+                'value' => $data['payload']['d']['hum'] ?? 0,
+                'ranges' => [30, 50, 65, 80, 90, 100],
+                'names' => ['Very Dry', 'Dry', 'Comfortable', 'Sticky', 'Muggy', 'Oppressive']
+            ],
+            'temperature' => [
+                'value' => $data['payload']['d']['temp'] ?? 0,
+                'ranges' => [20, 25, 30, 35, 40, 45],
+                'names' => ['Cold', 'Below Average', 'Normal', 'Above Average', 'Sweltering', 'Scorching']
+            ],
+            'pm25' => [
+                'value' => $data['payload']['d']['p1'] ?? 0,
+                'ranges' => [30, 60, 90, 120, 250, 480],
+                'names' => ['Below normal', 'Normal', 'High', 'Very High', 'Dangerous', 'Hazardous']
+            ],
+            'pm10' => [
+                'value' => $data['payload']['d']['p2'] ?? 0,
+                'ranges' => [50, 100, 250, 350, 430, 510],
+                'names' => ['Below normal', 'Normal', 'High', 'Very High', 'Dangerous', 'Hazardous']
+            ],
+            'pm1' => [
+                'value' => $data['payload']['d']['p3'] ?? 0,
+                'ranges' => [30, 60, 90, 120, 250, 480],
+                'names' => ['Below normal', 'Normal', 'High', 'Very High', 'Dangerous', 'Hazardous']
+            ],
+            'pm100' => [
+                'value' => $data['payload']['d']['p4'] ?? 0,
+                'ranges' => [50, 100, 250, 350, 430, 510],
+                'names' => ['Below normal', 'Normal', 'High', 'Very High', 'Dangerous', 'Hazardous']
+            ],
+            'co' => [
+                'value' => $data['payload']['d']['g2'] ?? 0,
+                'ranges' => [1, 2, 10, 20, 34, 49],
+                'names' => ['Below normal', 'Normal', 'High', 'Very High', 'Dangerous', 'Hazardous']
+            ],
+            'co2' => [
+                'value' => $data['payload']['d']['g1'] ?? 0,
+                'ranges' => [300, 400, 500, 650, 850, 1100],
+                'names' => ['Below normal', 'Normal', 'High', 'Very High', 'Dangerous', 'Hazardous']
+            ],
+            'noise' => [
+                'value' => $data['payload']['d']['leq'] ?? 0,
+                'ranges' => [40, 60, 80, 100, 120, 140],
+                'names' => ['Quiet', 'Moderate', 'Loud', 'Very Loud', 'Extreme', 'Painful']
+            ],
+            'pressure' => [
+                'value' => $data['payload']['d']['pr'] ?? 0,
+                'ranges' => [996, 1009, 1016, 1022, 1032, 1046],
+                'names' => ['Very Low', 'Low', 'Normal', 'Above Average', 'High', 'Very High']
+            ],
+            'uv' => [
+                'value' => $data['payload']['d']['uv'] ?? 0,
+                'ranges' => [2, 3, 5, 7, 10, 14],
+                'names' => ['Very Low', 'Low', 'Moderate', 'High', 'Very High', 'Extreme']
+            ],
+            'light_intensity' => [
+                'value' => $data['payload']['d']['light'] ?? 0,
+                'ranges' => [100, 500, 2000, 10000, 25000, 62500],
+                'names' => ['Dim', 'Low', 'Moderate', 'Bright', 'Very Bright', 'Extreme']
+            ]
+        ];
+    }
+
+    /**
+     * Processes a single metric to calculate the percentage, level name, and level number.
+     * 
+     * @param array $metric The metric data including value, ranges, and names.
+     * @return array The processed metric data including value, percentage, level name, and level number.
+     * @author Sooryajith
+     */
+    public static function processMetric($metric)
+    {
+        $info = FrontendHelper::getGaugeInfo($metric['value'], $metric['ranges'], $metric['names']);
+        return [
+            'value' => $metric['value'],
+            'percentage' => $info['percentage'],
+            'level_name' => $info['name'],
+            'level_number' => $info['number']
+        ];
+    }
+
+    /**
      * Get gauge information based on a value within a specified range.
      *
      * This function calculates the gauge level of the value based on the provided number range

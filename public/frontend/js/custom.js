@@ -7,64 +7,69 @@ $(document).ready(function () {
             type: "get",
             dataType: "json",
             success: function (response) {
-                // Update data for each sensor
-                const sensors = [
-                    { type: 'aqi', data: response.data.aqi },
-                    { type: 'humidity', data: response.data.humidity },
-                    { type: 'temperature', data: response.data.temperature },
-                    { type: 'pm25', data: response.data.pm25 },
-                    { type: 'pm10', data: response.data.pm10 },
-                    { type: 'pm1', data: response.data.pm1 },
-                    { type: 'pm100', data: response.data.pm100 },
-                    { type: 'co', data: response.data.co },
-                    { type: 'co2', data: response.data.co2 },
-                    { type: 'noise', data: response.data.noise },
-                    { type: 'pressure', data: response.data.pressure },
-                    { type: 'uv', data: response.data.uv },
-                    { type: 'light_intensity', data: response.data.light_intensity }
-                ];
+                if (response && response.error) {
+                    // Handle response error
+                    console.error('Server responded with an error:', response.error);
+                } else {
+                    // Update data for each sensor
+                    const sensors = [
+                        { type: 'aqi', data: response.data.aqi },
+                        { type: 'humidity', data: response.data.humidity },
+                        { type: 'temperature', data: response.data.temperature },
+                        { type: 'pm25', data: response.data.pm25 },
+                        { type: 'pm10', data: response.data.pm10 },
+                        { type: 'pm1', data: response.data.pm1 },
+                        { type: 'pm100', data: response.data.pm100 },
+                        { type: 'co', data: response.data.co },
+                        { type: 'co2', data: response.data.co2 },
+                        { type: 'noise', data: response.data.noise },
+                        { type: 'pressure', data: response.data.pressure },
+                        { type: 'uv', data: response.data.uv },
+                        { type: 'light_intensity', data: response.data.light_intensity }
+                    ];
 
-                // Loop through each sensor and update its data
-                sensors.forEach(sensor => {
-                    updateSensorData(sensor.type, sensor.data);
-                });
-
-                // Animate the update of each sensor value
-                $('.IndexValue .Count').each(function () {
-                    var $this = $(this),
-                        countTo = $this.attr('data-count');
-
-                    $this.attr('aria-live', 'polite');
-                    $this.attr('aria-busy', 'true');
-
-                    $({
-                        countNum: $this.text()
-                    }).animate({
-                        countNum: countTo
-                    }, {
-                        duration: 2000,
-                        easing: 'linear',
-                        step: function () {
-                            if ($this.hasClass('co-value') || $this.hasClass('uv-value')) {
-                                $this.text(parseFloat(this.countNum).toFixed(2));
-                            } else {
-                                $this.text(Math.round(parseFloat(this.countNum)));
-                            }
-                        },
-                        complete: function () {
-                            if ($this.hasClass('co-value') || $this.hasClass('uv-value')) {
-                                if (this.countNum % 1 === 0) {
-                                    $this.text(parseInt(this.countNum, 10));
-                                } else {
-                                    $this.text(parseFloat(this.countNum).toFixed(2));
-                                }
-                            } else {
-                                $this.text(Math.round(parseFloat(this.countNum)));
-                            }
-                            $this.attr('aria-busy', 'false');
-                        }
+                    // Loop through each sensor and update its data
+                    sensors.forEach(sensor => {
+                        updateSensorData(sensor.type, sensor.data);
                     });
-                });
+
+                    // Animate the update of each sensor value
+                    $('.IndexValue .Count').each(function () {
+                        var $this = $(this),
+                            countTo = $this.attr('data-count');
+
+                        $this.attr('aria-live', 'polite');
+                        $this.attr('aria-busy', 'true');
+
+                        $({
+                            countNum: $this.text()
+                        }).animate({
+                            countNum: countTo
+                        }, {
+                            duration: 2000,
+                            easing: 'linear',
+                            step: function () {
+                                if ($this.hasClass('co-value') || $this.hasClass('uv-value')) {
+                                    $this.text(parseFloat(this.countNum).toFixed(2));
+                                } else {
+                                    $this.text(Math.round(parseFloat(this.countNum)));
+                                }
+                            },
+                            complete: function () {
+                                if ($this.hasClass('co-value') || $this.hasClass('uv-value')) {
+                                    if (this.countNum % 1 === 0) {
+                                        $this.text(parseInt(this.countNum, 10));
+                                    } else {
+                                        $this.text(parseFloat(this.countNum).toFixed(2));
+                                    }
+                                } else {
+                                    $this.text(Math.round(parseFloat(this.countNum)));
+                                }
+                                $this.attr('aria-busy', 'false');
+                            }
+                        });
+                    });
+                }
             },
             error: function (xhr, status, error) {
                 // Handle error
